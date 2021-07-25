@@ -1,14 +1,29 @@
-'use strict'
-const text = document.querySelector('.contacts')
-const audio = document.querySelector('.audio')
+"use strict";
+const navToggle = document.querySelector(".nav__container-toggle");
+const menu = document.querySelector(".nav__container");
+const items = document.querySelectorAll(".nav__container-item");
+console.log(items);
 
-audio.addEventListener("canplaythrough", event => {
-    /* аудио может быть воспроизведено; проиграть, если позволяют разрешения */
-    myAudioElement.play();
-  });
+navToggle.addEventListener("click", function () {
+  items.forEach((item) => item.classList.add("active"));
+  console.log("boum");
+  // if (menu.classList.contains("active")) {
+  //   menu.classList.remove("active");
+  //   navToggle.querySelector("a").innerHTML = "<i class=’fas fa-bars’></i>";
+  // } else {
+  //   item.classList.add("active");
+  //   navToggle.querySelector("a").innerHTML = "<i class=’fas fa-times’></i>";
+  // }
+});
+// const text = document.querySelector('.contacts')
+// const audio = document.querySelector('.audio')
 
+// audio.addEventListener("canplaythrough", event => {
+//     /* аудио может быть воспроизведено; проиграть, если позволяют разрешения */
+//     myAudioElement.play();
+//   });
 
-// let counter = 0; 
+// let counter = 0;
 // const counterFn = () => {
 // counter++;
 
