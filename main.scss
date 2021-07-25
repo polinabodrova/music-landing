@@ -1,15 +1,42 @@
-html {
-  box-sizing: border-box;
-}
+$main: #393e46;
+$greenblue: #00adb5;
 
 *,
 *::after,
 *::before {
-  box-sizing: inherit;
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
+}
+
+html {
   font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
   font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+#initial-page {
+  background-color: $main;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.initial-page__logo {
+  width: auto;
+  height: 10%;
+  max-width: 100%;
+  &-img {
+    width: auto;
+    max-width: 80rem;
+    display: block;
+  }
 }
 
 // .initial-page {
