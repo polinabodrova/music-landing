@@ -1,0 +1,127 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  font-family: "Lato", sans-serif;
+}
+
+// .initial-page {
+//   height: 100vh;
+//   background: #2171f1;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-size: 30rem;
+//   //   transition: 1s ease-out;
+// }
+
+// .name-box {
+//   display: inline-block;
+//   position: relative;
+//   user-select: none;
+// }
+
+// .initial-page .name {
+//   color: #fff;
+//   position: relative;
+//   left: 5.9rem;
+//   z-index: 1;
+// }
+
+// .initial-page .surname {
+//   position: relative;
+//   color: #00adb5;
+// }
+
+// .main-container {
+//   height: 100vh;
+//   width: 100%;
+//   background: #393e46;
+// }
+
+// .logo {
+//   position: relative;
+//   left: 2rem;
+//   font-size: 5rem;
+//   color: #fff;
+//   // background-color: rgb(201, 89, 89);
+//   width: 20rem;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+// }
+// .logo > {
+//   display: block;
+// }
+// .logo .line {
+//   display: block;
+//   width: 12rem;
+//   height: 0.5rem;
+//   background: #00adb5;
+// }
+
+// .nav-wrapper {
+//   display: flex;
+//   justify-content: flex-end;
+//   width: 100%;
+// }
+
+// .nav-bar {
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
+//   position: relative;
+//   height: 10rem;
+//   width: 40rem;
+//   background: #393e46;
+//   font-size: 5rem;
+//   text-transform: uppercase;
+//   color: #fff;
+// }
+
+// .circle {
+//   width: 40rem;
+//   height: 40rem;
+//   position: absolute;
+//   border-radius: 50%;
+//   background-color: #00adb5;
+//   top: 30rem;
+//   left: 20rem;
+//   filter: blur(0.1rem);
+// }
+
+// .sasha {
+//   position: relative;
+//   width: 50rem;
+//   z-index: 2;
+//   left: 17rem;
+// }
+
+// .player {
+//   width: 20rem;
+//   height: 40rem;
+//   background-color: rgb(40, 206, 115);
+//   position: absolute;
+//   bottom: 10rem;
+//   right: 10rem;
+//   z-index: 4;
+// }
+
+// .btn-play {
+//   background-color: rgb(189, 79, 79);
+//   width: 6rem;
+//   height: 6rem;
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   // transform: translateY(-50%);
+//   transform: translateX(-50%);
+// }
