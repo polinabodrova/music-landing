@@ -4,9 +4,18 @@ const menu = document.querySelector(".nav__container");
 const items = document.querySelectorAll(".nav__container-item");
 console.log(items);
 
+//For mobile version
 navToggle.addEventListener("click", function () {
-  items.forEach((item) => item.classList.add("active"));
-  console.log("boum");
+  let elements = Array.from(items);
+  let check = elements.every((el) => el.classList.contains("active"));
+  if (!check) {
+    items.forEach((item) => item.classList.add("active"));
+    navToggle.innerHTML = "<a href='#'><i class='fas fa-times'></i></a>";
+  } else {
+    items.forEach((item) => item.classList.remove("active"));
+    navToggle.innerHTML = "<a href='#'><i class='fas fa-bars'></i></a>";
+  }
+
   // if (menu.classList.contains("active")) {
   //   menu.classList.remove("active");
   //   navToggle.querySelector("a").innerHTML = "<i class=’fas fa-bars’></i>";

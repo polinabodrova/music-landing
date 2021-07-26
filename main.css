@@ -6131,7 +6131,7 @@ body {
 
 #initial-page {
   background-color: #393e46;
-  height: 100vh;
+  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6169,10 +6169,8 @@ a {
 .nav__container {
   list-style-type: none;
   font-size: 1.5rem;
-}
-
-.nav__container-logo {
-  padding: 7.5px 10px 7.5px 0;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .nav__container-item {
@@ -6180,43 +6178,64 @@ a {
 }
 
 /* Mobile menu */
-.nav__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.nav__container-logo {
-  font-size: 2rem;
-}
-
-.nav__container-item {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
-  width: 100%;
-  text-align: center;
-  display: none;
-}
-
-.nav__container-toggle {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  font-size: 2rem;
-}
-
-.active {
-  display: block;
+@media all and (min-width: 400px) {
+  .nav__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav__container-logo {
+    font-size: 2rem;
+  }
+  .nav__container-item {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+  .nav__container-toggle {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    font-size: 2rem;
+  }
+  .active {
+    display: block;
+  }
 }
 
 /* Desktop menu */
+@media all and (min-width: 960px) {
+  .nav__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav__container-logo {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .nav__container-item {
+    font-size: 1.7rem;
+    display: block;
+    width: auto;
+  }
+  .nav__container-toggle {
+    display: none;
+  }
+}
 /*# sourceMappingURL=main.css.map */
