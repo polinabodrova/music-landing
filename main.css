@@ -6115,6 +6115,7 @@ readers do not read off random characters that represent icons */
   padding: 0;
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  font-family: "Lato", sans-serif;
 }
 
 html {
@@ -6124,41 +6125,67 @@ html {
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
 }
 
 #initial-page {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
   background-color: #393e46;
-  height: 80vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-transition: 1s;
+  transition: 1s;
+  font-size: 10rem;
+  font-weight: 100;
+  letter-spacing: -1.5px;
 }
 
 .initial-page__logo {
-  width: auto;
-  height: 10%;
-  max-width: 100%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
 }
 
-.initial-page__logo-img {
-  width: auto;
-  max-width: 80rem;
-  display: block;
+.initial-page__logo-name {
+  position: relative;
+  display: inline-block;
+  bottom: -10rem;
+  opacity: 0;
+}
+
+.logo-active {
+  bottom: 0;
+  opacity: 1;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+
+.logo-bottom {
+  bottom: 15rem;
+  opacity: 0;
+  -webkit-transition: ease-in-out 0.5s;
+  transition: ease-in-out 0.5s;
+}
+
+.logo-surname {
+  position: relative;
+  color: #00adb5;
+  text-transform: uppercase;
+  z-index: 1;
+  right: 3.4rem;
 }
 
 /* Basic styling */
 nav {
-  background: #222;
-  padding: 0 15px;
+  background-color: transparent;
+  padding: 0 1.5rem;
 }
 
 a {
@@ -6178,42 +6205,6 @@ a {
 }
 
 /* Mobile menu */
-@media all and (min-width: 400px) {
-  .nav__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .nav__container-logo {
-    font-size: 2rem;
-  }
-  .nav__container-item {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-    width: 100%;
-    text-align: center;
-    display: none;
-  }
-  .nav__container-toggle {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    font-size: 2rem;
-  }
-  .active {
-    display: block;
-  }
-}
-
 /* Desktop menu */
 @media all and (min-width: 960px) {
   .nav__container {
@@ -6237,5 +6228,12 @@ a {
   .nav__container-toggle {
     display: none;
   }
+}
+
+.home-page__main-section {
+  background-image: url(./img/frantisek-unsplash.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  margin-top: -6rem;
 }
 /*# sourceMappingURL=main.css.map */

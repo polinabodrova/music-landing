@@ -1,4 +1,33 @@
 "use strict";
+//intro splash
+const intro = document.getElementById("initial-page");
+const logo = document.querySelector(".initial-page__logo");
+const logoSpans = document.querySelectorAll(".initial-page__logo-name");
+console.log(logoSpans);
+console.log(intro);
+window.addEventListener("DOMContentLoaded", function () {
+  setTimeout(() => {
+    //
+    logoSpans.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add("logo-active");
+      }, (index + 1) * 400);
+    });
+    setTimeout(() => {
+      logoSpans.forEach((el, index) => {
+        setTimeout(() => {
+          el.classList.remove("logo-active");
+          el.classList.add("logo-bottom");
+        }, (index + 1) * 500);
+      });
+    }, 2000);
+    setTimeout(() => {
+      intro.style.top = "-100vh";
+    }, 2400);
+  });
+});
+
+//////////////
 const navToggle = document.querySelector(".nav__container-toggle");
 const menu = document.querySelector(".nav__container");
 const items = document.querySelectorAll(".nav__container-item");
