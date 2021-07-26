@@ -29,7 +29,22 @@ body {
   top: 0;
   width: 100%;
   height: 100vh;
-  background-color: $main;
+  // background-image: linear-gradient(
+  //   to right,
+  //   #393f45,
+  //   #313a3d,
+  //   #2b3534,
+  //   #282f2b,
+  //   #272923
+  // );
+  background-image: linear-gradient(
+    to right,
+    #393f45,
+    #2e383b,
+    #273130,
+    #222925,
+    #1f211b
+  );
   transition: 1s;
   font-size: 10rem;
   font-weight: 100;
@@ -42,6 +57,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
+  white-space: nowrap;
+  text-shadow: 2px 2px 2px black;
   &-name {
     position: relative;
     display: inline-block;
@@ -60,12 +77,14 @@ body {
   opacity: 0;
   transition: ease-in-out 0.5s;
 }
+.logo-name {
+  z-index: 1;
+  left: 3.5rem;
+}
 .logo-surname {
   position: relative;
   color: $greenblue;
   text-transform: uppercase;
-  z-index: 1;
-  right: 3.4rem;
 }
 // .initial-page__logo {
 //   width: auto;

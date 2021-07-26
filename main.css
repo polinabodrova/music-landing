@@ -6136,7 +6136,8 @@ body {
   top: 0;
   width: 100%;
   height: 100vh;
-  background-color: #393e46;
+  background-image: -webkit-gradient(linear, left top, right top, from(#393f45), color-stop(#2e383b), color-stop(#273130), color-stop(#222925), to(#1f211b));
+  background-image: linear-gradient(to right, #393f45, #2e383b, #273130, #222925, #1f211b);
   -webkit-transition: 1s;
   transition: 1s;
   font-size: 10rem;
@@ -6151,6 +6152,8 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   color: #fff;
+  white-space: nowrap;
+  text-shadow: 2px 2px 2px black;
 }
 
 .initial-page__logo-name {
@@ -6174,12 +6177,15 @@ body {
   transition: ease-in-out 0.5s;
 }
 
+.logo-name {
+  z-index: 1;
+  left: 3.5rem;
+}
+
 .logo-surname {
   position: relative;
   color: #00adb5;
   text-transform: uppercase;
-  z-index: 1;
-  right: 3.4rem;
 }
 
 /* Basic styling */
