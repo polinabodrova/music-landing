@@ -44,15 +44,53 @@ navToggle.addEventListener("click", function () {
     items.forEach((item) => item.classList.remove("active"));
     navToggle.innerHTML = "<a href='#'><i class='fas fa-bars'></i></a>";
   }
-
-  // if (menu.classList.contains("active")) {
-  //   menu.classList.remove("active");
-  //   navToggle.querySelector("a").innerHTML = "<i class=’fas fa-bars’></i>";
-  // } else {
-  //   item.classList.add("active");
-  //   navToggle.querySelector("a").innerHTML = "<i class=’fas fa-times’></i>";
-  // }
 });
+//
+routes = {
+  "/": homePage,
+  "/work": workPage,
+  "/pricing": pricingPage,
+  "/contacts": contactsPage,
+};
+
+let pricingPage = `
+</div> 
+<h1>PRICING PAGE</h1>
+<div class="logo">
+<div class="logo-text">
+<span class='name'>Alex</span> 
+<span class='surname'>Naumov</span> 
+<div class="line">
+</div>
+<div class="text-underline">professional music producer <br>and beEtmeaker </div>
+</div>`;
+
+let workPage = `
+</div> 
+<h1>WORK</h1>
+<div class="logo">
+<div class="logo-text">
+<span class='name'>Alex</span> 
+<span class='surname'>Naumov</span> 
+<div class="line">
+</div>
+<div class="text-underline">professional music producer <br>and beEtmeaker </div>
+</div>`;
+
+let contactsPage = `
+</div> 
+<h1>CONTACTS</h1>
+<div class="logo">
+<div class="logo-text">
+<span class='name'>Alex</span> 
+<span class='surname'>Naumov</span> 
+<div class="line">
+</div>
+<div class="text-underline">professional music producer <br>and beEtmeaker </div>
+</div>`;
+
+///
+window.addEventListener("hashchange", function () {});
 // const text = document.querySelector('.contacts')
 // const audio = document.querySelector('.audio')
 

@@ -29,14 +29,6 @@ body {
   top: 0;
   width: 100%;
   height: 100vh;
-  // background-image: linear-gradient(
-  //   to right,
-  //   #393f45,
-  //   #313a3d,
-  //   #2b3534,
-  //   #282f2b,
-  //   #272923
-  // );
   background-image: linear-gradient(
     to right,
     #393f45,
@@ -99,7 +91,6 @@ body {
 /* Basic styling */
 nav {
   background-color: transparent;
-  // border-color: transparent;
   padding: 0 1.5rem;
 }
 a {
@@ -161,11 +152,32 @@ a {
   }
 }
 
-.home-page__main-section {
+.home-page__main-container {
   background-image: url(./img/frantisek-unsplash.jpg);
   background-size: cover;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   margin-top: -6rem;
+  display: grid;
+  grid-template-columns: 1fr 2rem 1fr;
+  justify-items: start;
+  align-items: end;
+  &-img {
+  }
+  &-text {
+    align-self: center;
+    font-size: 1.5rem;
+    color: white;
+    &-h {
+      font-size: 4.5rem;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    &-p {
+      font-size: 1.8rem;
+      padding-top: 1rem;
+    }
+  }
 }
 
 // .nav__container {
