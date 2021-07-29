@@ -9,7 +9,6 @@ $greenblue: #00adb5;
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  font-family: "Lato", sans-serif;
 }
 
 html {
@@ -20,6 +19,11 @@ body {
   box-sizing: border-box;
   font-weight: 400;
   line-height: 1.7;
+  font-family: "Lato", sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-image: url(./img/frantisek-unsplash.jpg);
+  background-size: 100% 100%;
 }
 
 #initial-page {
@@ -153,13 +157,12 @@ a {
 }
 
 .home-page__main-container {
-  background-image: url(./img/frantisek-unsplash.jpg);
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
+  // background-image: url(./img/frantisek-unsplash.jpg);
+  // background-size: cover;
+  min-height: 102vh;
   margin-top: -6rem;
   display: grid;
-  grid-template-columns: 1fr 2rem 1fr;
+  grid-template-columns: 1fr 1rem 1fr;
   justify-items: start;
   align-items: end;
   &-img {
@@ -169,15 +172,90 @@ a {
     font-size: 1.5rem;
     color: white;
     &-h {
-      font-size: 4.5rem;
+      font-size: 4.3rem;
       text-transform: uppercase;
       font-weight: 500;
     }
     &-p {
       font-size: 1.8rem;
-      padding-top: 1rem;
+      // padding-top: 1rem;
     }
   }
+}
+
+#work {
+  // background-image: url(./img/frantisek-unsplash.jpg);
+  min-height: 102vh;
+  width: 100vw;
+}
+
+.logo-text {
+  position: relative;
+  top: 10rem;
+  left: 5rem;
+  &__hr {
+    border: 1px solid $greenblue;
+    background-color: $greenblue;
+  }
+  &__description {
+    color: white;
+    font-size: 2rem;
+    line-height: 2.7rem;
+  }
+}
+.work-page__main {
+  display: grid;
+  grid-template-columns: 1fr 1rem 1fr;
+  justify-items: start;
+  align-items: end;
+}
+.player {
+  color: $greenblue;
+  font-size: 2rem;
+  width: 27rem;
+  height: 35rem;
+  background-image: url(./img/forest.jpg);
+  background-size: cover;
+  border-radius: 2rem;
+  border: solid 1rem rgba(255, 255, 255, 0.731);
+  &__main {
+    height: 100%;
+    width: 100%;
+    &-seekbar {
+      margin-top: 25rem;
+      display: flex;
+      justify-content: center;
+      &-input {
+        appearance: none;
+        overflow: hidden;
+        width: 85%;
+        height: 0.3rem;
+        background: #00acb568;
+        &::-webkit-slider-thumb {
+          appearance: none;
+          width: 0rem;
+          height: 0rem;
+          box-shadow: -30rem 0 0 30rem #43e5f7;
+        }
+      }
+    }
+    &-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem;
+      font-size: 2.7rem;
+      cursor: pointer;
+      &-playpause {
+        margin: 0 1.5rem;
+        font-size: 3.9rem;
+      }
+    }
+  }
+}
+
+.fa-pause {
+  display: none;
 }
 
 // .nav__container {

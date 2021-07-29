@@ -46,51 +46,7 @@ navToggle.addEventListener("click", function () {
   }
 });
 //
-routes = {
-  "/": homePage,
-  "/work": workPage,
-  "/pricing": pricingPage,
-  "/contacts": contactsPage,
-};
 
-let pricingPage = `
-</div> 
-<h1>PRICING PAGE</h1>
-<div class="logo">
-<div class="logo-text">
-<span class='name'>Alex</span> 
-<span class='surname'>Naumov</span> 
-<div class="line">
-</div>
-<div class="text-underline">professional music producer <br>and beEtmeaker </div>
-</div>`;
-
-let workPage = `
-</div> 
-<h1>WORK</h1>
-<div class="logo">
-<div class="logo-text">
-<span class='name'>Alex</span> 
-<span class='surname'>Naumov</span> 
-<div class="line">
-</div>
-<div class="text-underline">professional music producer <br>and beEtmeaker </div>
-</div>`;
-
-let contactsPage = `
-</div> 
-<h1>CONTACTS</h1>
-<div class="logo">
-<div class="logo-text">
-<span class='name'>Alex</span> 
-<span class='surname'>Naumov</span> 
-<div class="line">
-</div>
-<div class="text-underline">professional music producer <br>and beEtmeaker </div>
-</div>`;
-
-///
-window.addEventListener("hashchange", function () {});
 // const text = document.querySelector('.contacts')
 // const audio = document.querySelector('.audio')
 
