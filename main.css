@@ -6309,7 +6309,7 @@ a {
   font-size: 2rem;
   width: 27rem;
   height: 35rem;
-  background-image: url(./img/forest.jpg);
+  background-image: url(./img/na_zare.jpg);
   background-size: cover;
   border-radius: 2rem;
   border: solid 1rem rgba(255, 255, 255, 0.731);
@@ -6318,10 +6318,11 @@ a {
 .player__main {
   height: 100%;
   width: 100%;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
-.player__main-seekbar {
-  margin-top: 25rem;
+.player__main-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6330,23 +6331,27 @@ a {
           justify-content: center;
 }
 
-.player__main-seekbar-input {
+.player__main-progress {
+  margin-top: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 85%;
+  height: 0.4rem;
+  -ms-flex-item-align: center;
+      align-self: center;
+  background: #00acb568;
+  border-radius: 3rem;
+}
+
+.player__main-progress-line {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   overflow: hidden;
-  width: 85%;
   height: 0.3rem;
-  background: #00acb568;
-}
-
-.player__main-seekbar-input::-webkit-slider-thumb {
-  -webkit-appearance: none;
-          appearance: none;
-  width: 0rem;
-  height: 0rem;
-  -webkit-box-shadow: -30rem 0 0 30rem #43e5f7;
-          box-shadow: -30rem 0 0 30rem #43e5f7;
+  background: cornflowerblue;
+  border-radius: 3rem;
 }
 
 .player__main-controls {
@@ -6369,7 +6374,11 @@ a {
   font-size: 3.9rem;
 }
 
-.fa-pause {
+.notactive {
   display: none;
+}
+
+.active {
+  display: block;
 }
 /*# sourceMappingURL=main.css.map */

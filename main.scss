@@ -214,29 +214,32 @@ a {
   font-size: 2rem;
   width: 27rem;
   height: 35rem;
-  background-image: url(./img/forest.jpg);
+  background-image: url(./img/na_zare.jpg);
   background-size: cover;
   border-radius: 2rem;
   border: solid 1rem rgba(255, 255, 255, 0.731);
   &__main {
     height: 100%;
     width: 100%;
-    &-seekbar {
-      margin-top: 25rem;
+    transition: all 500ms ease-in-out;
+    &-flex {
       display: flex;
       justify-content: center;
-      &-input {
+    }
+    &-progress {
+      margin-top: 25rem;
+      display: flex;
+      width: 85%;
+      height: 0.4rem;
+      align-self: center;
+      background: #00acb568;
+      border-radius: 3rem;
+      &-line {
         appearance: none;
         overflow: hidden;
-        width: 85%;
         height: 0.3rem;
-        background: #00acb568;
-        &::-webkit-slider-thumb {
-          appearance: none;
-          width: 0rem;
-          height: 0rem;
-          box-shadow: -30rem 0 0 30rem #43e5f7;
-        }
+        background: cornflowerblue;
+        border-radius: 3rem;
       }
     }
     &-controls {
@@ -254,8 +257,12 @@ a {
   }
 }
 
-.fa-pause {
+.notactive {
   display: none;
+}
+
+.active {
+  display: block;
 }
 
 // .nav__container {
