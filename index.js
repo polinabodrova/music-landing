@@ -5,27 +5,27 @@ const logo = document.querySelector(".initial-page__logo");
 const logoSpans = document.querySelectorAll(".initial-page__logo-name");
 console.log(logoSpans);
 console.log(intro);
-// window.addEventListener("DOMContentLoaded", function () {
-//   setTimeout(() => {
-//     //
-//     logoSpans.forEach((el, index) => {
-//       setTimeout(() => {
-//         el.classList.add("logo-active");
-//       }, (index + 1) * 400);
-//     });
-//     setTimeout(() => {
-//       logoSpans.forEach((el, index) => {
-//         setTimeout(() => {
-//           el.classList.remove("logo-active");
-//           el.classList.add("logo-bottom");
-//         }, (index + 1) * 500);
-//       });
-//     }, 2000);
-//     setTimeout(() => {
-//       intro.style.top = "-100vh";
-//     }, 2400);
-//   });
-// });
+window.addEventListener("DOMContentLoaded", function () {
+  setTimeout(() => {
+    //
+    logoSpans.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add("logo-active");
+      }, (index + 1) * 400);
+    });
+    setTimeout(() => {
+      logoSpans.forEach((el, index) => {
+        setTimeout(() => {
+          el.classList.remove("logo-active");
+          el.classList.add("logo-bottom");
+        }, (index + 1) * 500);
+      });
+    }, 2000);
+    setTimeout(() => {
+      intro.style.top = "-100vh";
+    }, 2400);
+  });
+});
 //player
 const player = document.querySelector(".player"); //background-img
 const audio = document.querySelector(".player__main-audio");
@@ -40,6 +40,24 @@ const pauseButton = document.querySelector(".fa-pause");
 
 let currentSongIndex = 0;
 const songs = ["na_zare", "melody", "waiting"];
+let currentFeedbackIndex = 0;
+const feedbacks = [
+  {
+    text: "This guy makes bangers! He took the things I gave him and he made a track that came out better than I'd imagine.",
+    picture: "circle-cropped-1.png",
+    name: "Brascomb",
+  },
+  {
+    text: "You are doing an incredible thing. If you’re looking to take your music to the next level, with a real pro sound, this is the guy!",
+    picture: "circle-cropped-2.png",
+    name: "Jack",
+  },
+  {
+    text: "I loved the communication and the final result. Very happy working with him. I would totally recommend.",
+    picture: "circle-cropped-3.png",
+    name: "Anna",
+  },
+];
 
 function playSong() {
   playButton.classList.add("notactive");
@@ -60,12 +78,26 @@ function loadSong(song) {
   player.style.backgroundImage = `url(./img/${song}.jpg)`;
 }
 
+function loadFeedback(el) {
+  const feedbackText = document.querySelector(".feedback__text");
+  const img = document.querySelector(".feedback__nameimg-img-src");
+  const name = document.querySelector(".feedback__nameimg-name");
+  feedbackText.innerHTML = `${el.text}`;
+  img.src = `img/${el.picture}`;
+  name.innerHTML = `${el.name}`;
+}
+
 function prevSong() {
   currentSongIndex--;
   if (currentSongIndex < 0) {
     currentSongIndex = songs.length - 1;
   }
+  currentFeedbackIndex--;
+  if (currentFeedbackIndex < 0) {
+    currentFeedbackIndex = feedbacks.length - 1;
+  }
   loadSong(songs[currentSongIndex]);
+  loadFeedback(feedbacks[currentFeedbackIndex]);
   playSong();
 }
 prevButton.addEventListener("click", prevSong);
@@ -75,36 +107,19 @@ function nextSong() {
   if (currentSongIndex > songs.length - 1) {
     currentSongIndex = 0;
   }
+  currentFeedbackIndex++;
+  if (currentFeedbackIndex > feedbacks.length - 1) {
+    currentFeedbackIndex = 0;
+  }
   loadSong(songs[currentSongIndex]);
+  loadFeedback(feedbacks[currentFeedbackIndex]);
   playSong();
 }
-
 nextButton.addEventListener("click", nextSong);
-
-// function updatedBar(e) {
-//   const { duration, currentTime } = e.target;
-//   const percentProgress = (currentTime / duration) * 100;
-//   bar.style.width = `${percentProgress}%`;
-// }
-
-// function setBar() {
-//   const width = this.clientWidth;
-//   const clickX = e.offsetX;
-//   const duration = audio.duration;
-//   audio.currentTime = (clickX / width) * duration;
-// }
-
-// audio.addEventListener("timeupdate", updatedBar);
-// bar.addEventListener("click", setBar);
-// barDiv.addEventListener("change", function () {
-//   audio.currentTime = barDiv.value;
-// });
 
 audio.addEventListener("ended", nextSong);
 
 function updateProgress(e) {
-  // console.log(e.target.duration);
-  // console.log(e.target.currentTime);
   const { duration, currentTime } = e.target;
   const progressPercent = (currentTime * 100) / duration;
   line.style.width = `${progressPercent}%`;
@@ -118,6 +133,8 @@ function setProgress(e) {
   audio.currentTime = (clickX / width) * duration;
 }
 barDiv.addEventListener("click", setProgress);
+// feedback
+
 //////////////
 const navToggle = document.querySelector(".nav__container-toggle");
 const menu = document.querySelector(".nav__container");

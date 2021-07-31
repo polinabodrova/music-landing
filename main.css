@@ -6296,12 +6296,27 @@ a {
 .work-page__main {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1rem 1fr;
-      grid-template-columns: 1fr 1rem 1fr;
-  justify-items: start;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
+}
+
+.work-page__main-music {
+  margin-top: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .player {
@@ -6312,7 +6327,9 @@ a {
   background-image: url(./img/na_zare.jpg);
   background-size: cover;
   border-radius: 2rem;
-  border: solid 1rem rgba(255, 255, 255, 0.731);
+  border: solid 0.3rem white;
+  -webkit-box-shadow: 0 0 0.5rem white;
+          box-shadow: 0 0 0.5rem white;
 }
 
 .player__main {
@@ -6340,8 +6357,9 @@ a {
   height: 0.4rem;
   -ms-flex-item-align: center;
       align-self: center;
-  background: #00acb568;
+  background: #00acb573;
   border-radius: 3rem;
+  cursor: pointer;
 }
 
 .player__main-progress-line {
@@ -6350,7 +6368,7 @@ a {
           appearance: none;
   overflow: hidden;
   height: 0.3rem;
-  background: cornflowerblue;
+  background: #00adb5;
   border-radius: 3rem;
 }
 
@@ -6372,6 +6390,38 @@ a {
 .player__main-controls-playpause {
   margin: 0 1.5rem;
   font-size: 3.9rem;
+}
+
+.feedback {
+  color: white;
+  width: 50rem;
+  font-size: 1.8rem;
+}
+
+.feedback__text {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.feedback__nameimg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+.feedback__nameimg-img {
+  margin-right: 2rem;
 }
 
 .notactive {
