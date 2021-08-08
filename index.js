@@ -48,7 +48,7 @@ const feedbacks = [
     name: "Brascomb",
   },
   {
-    text: "You are doing an incredible thing. If you’re looking to take your music to the next level, with a real pro sound, this is the guy!",
+    text: "He is doing an incredible thing. If you’re looking to take your music to the next level, with a real pro sound, this is the guy!",
     picture: "circle-cropped-2.png",
     name: "Jack",
   },
@@ -62,7 +62,11 @@ const feedbacks = [
 function playSong() {
   playButton.classList.add("notactive");
   pauseButton.classList.remove("notactive");
+  if (!context) {
+    animationPrepare();
+  }
   audio.play();
+  animationLoop();
 }
 playButton.addEventListener("click", playSong);
 
@@ -133,8 +137,50 @@ function setProgress(e) {
   audio.currentTime = (clickX / width) * duration;
 }
 barDiv.addEventListener("click", setProgress);
-// feedback
+// music round
+// let context;
+// let analyzer;
+// function animationPrepare() {
+//   context = new AudioContext(); // creating audio context
+//   const source = context.createMediaElementSource(audio); //creating audio source
+//   const analyzer = context.createAnalyser(); //creating audio analyzer
+//   source.connect(analyzer); // connecting the source to the analyzer and back
+//   source.connect(context.destination);
+//   loop();
+// }
 
+// function loop() {
+//   window.requestAnimationFrame(loop);
+//   const dataArray = new Uint8Array(analyzer.frequencyBinCount);
+//   analyzer.getByteFrequencyData(dataArray); //
+//   const roundAnimation = document.querySelector(
+//     ".work-page__main-img-animation"
+//   );
+//   roundAnimation.style.minHeight = dataArray[55] + "px";
+//   roundAnimation.style.width = dataArray[55] + "px";
+// }
+let analyzer;
+let context;
+function animationPrepare() {
+  context = new AudioContext();
+  analyzer = context.createAnalyser();
+  let src = context.createMediaElementSource(audio);
+  src.connect(analyzer);
+  analyzer.connect(context.destination);
+  animationLoop();
+}
+function animationLoop() {
+  if (!audio.paused) {
+    window.requestAnimationFrame(animationLoop);
+  }
+  let array = new Uint8Array(analyzer.frequencyBinCount);
+  analyzer.getByteFrequencyData(array);
+  const roundAnimation = document.querySelector(
+    ".work-page__main-animation-block"
+  );
+  roundAnimation.style.minHeight = array[200] / 3 + "rem";
+  roundAnimation.style.width = array[200] / 3 + "rem";
+}
 //////////////
 const navToggle = document.querySelector(".nav__container-toggle");
 const menu = document.querySelector(".nav__container");

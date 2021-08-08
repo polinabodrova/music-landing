@@ -22,8 +22,9 @@ body {
   font-family: "Lato", sans-serif;
   max-width: 100%;
   overflow-x: hidden;
-  background-image: url(./img/frantisek-unsplash.jpg);
+  background-image: url(./img/joshua-sukoff.jpg);
   background-size: 100% 100%;
+  // background: radial-gradient(ellipse at bottom, #5091dd 0%, #030617 100%);
 }
 
 #initial-page {
@@ -182,8 +183,8 @@ a {
 
 .logo-text {
   position: relative;
-  top: 10rem;
   left: 5rem;
+  margin-top: 2rem;
   &__hr {
     border: 1px solid $greenblue;
     background-color: $greenblue;
@@ -195,12 +196,37 @@ a {
   }
 }
 .work-page__main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  align-items: end;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 5rem 0 2rem;
+  height: 100vh;
+  &-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6rem;
+  }
+  &-animation-img {
+    position: relative;
+    z-index: 1;
+  }
+  &-animation-block {
+    width: 45rem;
+    min-height: 45rem;
+    border-radius: 50%;
+    background: transparent;
+    opacity: 2;
+    position: absolute;
+    filter: blur(2rem);
+    // box-shadow: 120px 80px 40px 0 #0ff;
+    // filter: drop-shadow(-10px -10px 50px $greenblue)
+    //   drop-shadow(10px 10px 200px $greenblue);
+    box-shadow: 0 0 15rem lighten($greenblue, 40%),
+      0 0 15rem lighten($greenblue, 40%);
+  }
   &-music {
-    margin-top: 10rem;
+    margin-top: 12rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -228,7 +254,7 @@ a {
       margin-top: 25rem;
       display: flex;
       width: 85%;
-      height: 0.4rem;
+      height: 0.6rem;
       align-self: center;
       background: #00acb573;
       border-radius: 3rem;
@@ -236,7 +262,7 @@ a {
       &-line {
         appearance: none;
         overflow: hidden;
-        height: 0.3rem;
+        height: 0.5rem;
         background: $greenblue;
         border-radius: 3rem;
       }
@@ -282,4 +308,93 @@ a {
 
 .active {
   display: block;
+}
+
+#price {
+  // background-image: url(./img/frantisek-unsplash.jpg);
+  min-height: 102vh;
+  width: 100vw;
+}
+
+.price__container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  flex-wrap: wrap;
+  cursor: pointer;
+  &-item {
+    position: relative;
+    flex-basis: 25rem;
+    height: auto;
+    margin: 2rem;
+    &:hover &-head {
+      color: $greenblue;
+      transform: translateY(-2rem);
+    }
+    &:hover &-main {
+      color: $greenblue;
+      transform: translateY(-2rem);
+    }
+    &-head {
+      position: relative;
+      height: 7.5rem;
+      width: 100%;
+      background-color: #c4c4c4;
+      border-radius: 1.5rem;
+      color: white;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      line-height: 7.5rem;
+      font-size: 1.7rem;
+      transition: 0.3s ease-in-out;
+    }
+    &-main {
+      height: 30rem;
+      background-color: #c4c4c4;
+      position: relative;
+      border-radius: 1.5rem;
+      transition: 0.3s ease-in-out;
+    }
+  }
+  // &-standard {
+  //   height: 30%;
+  //   width: 20%;
+  //   &-head {
+  //     width: 30rem;
+  //     height: 8rem;
+  //     background-color: #c4c4c4;
+  //     position: absolute;
+  //     border-radius: 1.5rem;
+  //     color: white;
+  //   }
+  //   &-main {
+  //     width: 30rem;
+  //     height: 35rem;
+  //     background-color: #c4c4c4;
+  //     position: relative;
+  //     top: 9.5rem;
+  //     border-radius: 1.5rem;
+  //   }
+  // }
+  // &-premium {
+  //   height: 40%;
+  //   width: 20%;
+  //   &-head {
+  //     width: 30rem;
+  //     height: 8rem;
+  //     background-color: #c4c4c4;
+  //     position: absolute;
+  //     border-radius: 1.5rem;
+  //     color: white;
+  //   }
+  //   &-main {
+  //     width: 30rem;
+  //     height: 35rem;
+  //     background-color: #c4c4c4;
+  //     position: relative;
+  //     top: 9.5rem;
+  //     border-radius: 1.5rem;
+  //   }
+  // }
 }
