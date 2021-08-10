@@ -6130,6 +6130,7 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   background-image: url(./img/joshua-sukoff.jpg);
+  background-size: cover;
   background-size: 100% 100%;
 }
 
@@ -6358,7 +6359,7 @@ a {
   font-size: 2rem;
   width: 27rem;
   height: 35rem;
-  background-image: url(./img/na_zare.jpg);
+  background-image: url(./img/na_zare.svg);
   background-size: cover;
   border-radius: 2rem;
   border: solid 0.3rem white;

@@ -1,5 +1,6 @@
 "use strict";
 //intro splash
+
 const intro = document.getElementById("initial-page");
 const logo = document.querySelector(".initial-page__logo");
 const logoSpans = document.querySelectorAll(".initial-page__logo-name");
@@ -79,7 +80,7 @@ pauseButton.addEventListener("click", pauseSong);
 
 function loadSong(song) {
   audio.src = `tracks/${song}.mp3`;
-  player.style.backgroundImage = `url(./img/${song}.jpg)`;
+  player.style.backgroundImage = `url(./img/${song}.svg)`;
 }
 
 function loadFeedback(el) {
