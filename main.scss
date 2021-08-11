@@ -358,44 +358,24 @@ a {
       transition: 0.3s ease-in-out;
     }
   }
-  // &-standard {
-  //   height: 30%;
-  //   width: 20%;
-  //   &-head {
-  //     width: 30rem;
-  //     height: 8rem;
-  //     background-color: #c4c4c4;
-  //     position: absolute;
-  //     border-radius: 1.5rem;
-  //     color: white;
-  //   }
-  //   &-main {
-  //     width: 30rem;
-  //     height: 35rem;
-  //     background-color: #c4c4c4;
-  //     position: relative;
-  //     top: 9.5rem;
-  //     border-radius: 1.5rem;
-  //   }
-  // }
-  // &-premium {
-  //   height: 40%;
-  //   width: 20%;
-  //   &-head {
-  //     width: 30rem;
-  //     height: 8rem;
-  //     background-color: #c4c4c4;
-  //     position: absolute;
-  //     border-radius: 1.5rem;
-  //     color: white;
-  //   }
-  //   &-main {
-  //     width: 30rem;
-  //     height: 35rem;
-  //     background-color: #c4c4c4;
-  //     position: relative;
-  //     top: 9.5rem;
-  //     border-radius: 1.5rem;
-  //   }
-  // }
+}
+
+.contact-page {
+  margin: 5rem;
+  &__client {
+    &-text {
+      margin-top: 2rem;
+      width: 40rem;
+      font-size: 1.7rem;
+      color: white;
+    }
+    &-form {
+      color: white;
+    }
+  }
+}
+
+form {
+  display: block;
+  color: white;
 }
