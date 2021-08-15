@@ -138,6 +138,9 @@ function setProgress(e) {
   audio.currentTime = (clickX / width) * duration;
 }
 barDiv.addEventListener("click", setProgress);
+////////
+////////
+////////
 // music round
 // let context;
 // let analyzer;
@@ -160,6 +163,10 @@ barDiv.addEventListener("click", setProgress);
 //   roundAnimation.style.minHeight = dataArray[55] + "px";
 //   roundAnimation.style.width = dataArray[55] + "px";
 // }
+//////////
+//////////
+//////////
+//THIS CODE KEEP
 let analyzer;
 let context;
 function animationPrepare() {
@@ -188,6 +195,14 @@ const menu = document.querySelector(".nav__container");
 const items = document.querySelectorAll(".nav__container-item");
 console.log(items);
 
+//Contact form
+const form = document.querySelector(".contact-page form");
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  console.log("boum");
+});
+let mail = new FormData(form);
+
 //For mobile version
 // navToggle.addEventListener("click", function () {
 //   let elements = Array.from(items);
@@ -201,26 +216,3 @@ console.log(items);
 //   }
 // });
 //
-
-// const text = document.querySelector('.contacts')
-// const audio = document.querySelector('.audio')
-
-// audio.addEventListener("canplaythrough", event => {
-//     /* аудио может быть воспроизведено; проиграть, если позволяют разрешения */
-//     myAudioElement.play();
-//   });
-
-// let counter = 0;
-// const counterFn = () => {
-// counter++;
-
-// const sec = Math.trunc(counter/10)
-// const miliSec = counter%10
-// const min = Math.trunc(counter/1000)%60
-
-// // const correctCounter = counter<=60? `${Math.trunc(counter/10)}.${counter}sec`:`${Math.trunc(counter/60)}.${counter%60}min`
-// console.log(min)
-// text.textContent = counter<600?`${sec}.${miliSec}s`:`${min}.${sec}min`;
-// }
-// text.textContent = counter;
-// setInterval(counterFn, 100);
