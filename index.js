@@ -1,6 +1,5 @@
 "use strict";
 //intro splash
-
 const intro = document.getElementById("initial-page");
 const logo = document.querySelector(".initial-page__logo");
 const logoSpans = document.querySelectorAll(".initial-page__logo-name");
@@ -79,8 +78,8 @@ function pauseSong() {
 pauseButton.addEventListener("click", pauseSong);
 
 function loadSong(song) {
-  audio.src = `tracks/${song}.mp3`;
-  player.style.backgroundImage = `url(./img/${song}.svg)`;
+  audio.src = `/tracks/${song}.mp3`;
+  player.style.backgroundImage = `url(/img/${song}.svg)`;
 }
 
 function loadFeedback(el) {
@@ -88,7 +87,7 @@ function loadFeedback(el) {
   const img = document.querySelector(".feedback__nameimg-img-src");
   const name = document.querySelector(".feedback__nameimg-name");
   feedbackText.innerHTML = `${el.text}`;
-  img.src = `img/${el.picture}`;
+  img.src = `/img/${el.picture}`;
   name.innerHTML = `${el.name}`;
 }
 

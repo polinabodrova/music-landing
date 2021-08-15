@@ -20,14 +20,12 @@ body {
   font-weight: 400;
   line-height: 1.7;
   font-family: "Lato", sans-serif;
-  max-width: 100%;
   overflow-x: hidden;
   background-image: url(./img/joshua-sukoff.jpg);
   background-size: cover;
-  background-size: 100% 100%;
-  // background: radial-gradient(ellipse at bottom, #5091dd 0%, #030617 100%);
+  min-height: 100vh;
 }
-
+//INITIAL WINDOW
 #initial-page {
   position: fixed;
   z-index: 1;
@@ -85,7 +83,7 @@ body {
   text-transform: uppercase;
 }
 
-/* Basic styling */
+//NAV BAR
 nav {
   background-color: transparent;
   padding: 0 1.5rem;
@@ -175,12 +173,7 @@ a {
     }
   }
 }
-
-#work {
-  // background-image: url(./img/frantisek-unsplash.jpg);
-  min-height: 102vh;
-  width: 100vw;
-}
+//WORK SECTION
 
 .logo-text {
   position: relative;
@@ -200,17 +193,17 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0 5rem 0 2rem;
-  height: 100vh;
+  margin: 0 5rem 0 5rem;
   &-animation {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 6rem;
+    margin-left: 7rem;
   }
   &-animation-img {
     position: relative;
     z-index: 1;
+    align-self: flex-end;
   }
   &-animation-block {
     width: 45rem;
@@ -227,7 +220,7 @@ a {
       0 0 15rem lighten($greenblue, 40%);
   }
   &-music {
-    margin-top: 12rem;
+    margin-top: 6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -310,16 +303,10 @@ a {
 .active {
   display: block;
 }
-
-#price {
-  // background-image: url(./img/frantisek-unsplash.jpg);
-  min-height: 102vh;
-  width: 100vw;
-}
-
+//PRICE SECTION
 .price__container {
+  margin-top: 6rem;
   display: flex;
-  width: 100%;
   justify-content: center;
   position: relative;
   flex-wrap: wrap;
@@ -359,23 +346,86 @@ a {
     }
   }
 }
+// CONTACT PAGE
+.contacts {
+  margin: 2rem 0 auto 5rem;
+  display: flex;
+  flex-direction: row;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  justify-content: center;
+  flex-wrap: wrap;
 
-.contact-page {
-  margin: 5rem;
-  &__client {
-    &-text {
-      margin-top: 2rem;
-      width: 40rem;
+  &__form {
+    color: white;
+    & p {
+      margin: 1.5rem 0;
+    }
+    & span {
+      color: $greenblue;
+    }
+    & input {
+      width: 35rem;
+      height: 3.5rem;
+      border: none;
+      outline: none;
+      border-radius: 1.2rem;
+      background-color: rgba(128, 128, 128, 0.2);
+      margin: 0.6rem 0;
+    }
+    textarea {
+      border: none;
+      outline: none;
+      width: 35rem;
+      height: 10rem;
+      border-radius: 1.2rem;
+      background-color: rgba(128, 128, 128, 0.2);
+      vertical-align: super;
+      text-indent: 1rem;
+      line-height: 2.5rem;
       font-size: 1.7rem;
+      margin: 0.6rem 0;
       color: white;
     }
-    &-form {
-      color: white;
+    & button {
+      width: 15rem;
+      height: 4rem;
+      border-radius: 1.3rem;
+      background-color: $greenblue;
+      border: none;
+      cursor: pointer;
     }
   }
 }
-
-form {
-  display: block;
-  color: white;
+.contacts-img {
+  &__box {
+    position: relative;
+    background-color: hotpink;
+    width: 30rem;
+    height: 45rem;
+    margin: 2rem 4rem;
+    & ::before {
+      content: "";
+      position: absolute;
+    }
+    & img {
+    }
+    &-circle {
+      position: absolute;
+      width: 30rem;
+      height: 30rem;
+      background-color: $greenblue;
+      overflow: hidden;
+      bottom: 0;
+      left: 0;
+      border-radius: 50%;
+      & img {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 40rem;
+      }
+    }
+  }
 }
