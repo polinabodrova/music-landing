@@ -11,19 +11,20 @@ window.addEventListener("DOMContentLoaded", function () {
     logoSpans.forEach((el, index) => {
       setTimeout(() => {
         el.classList.add("logo-active");
-      }, (index + 1) * 400);
+      }, (index + 1) * 500);
     });
     setTimeout(() => {
       logoSpans.forEach((el, index) => {
         setTimeout(() => {
           el.classList.remove("logo-active");
           el.classList.add("logo-bottom");
-        }, (index + 1) * 500);
+        }, (index + 1) * 5);
       });
-    }, 2000);
+    }, 3100);
     setTimeout(() => {
-      intro.style.top = "-100vh";
-    }, 2400);
+      intro.style.filter = "blur(2rem)";
+      intro.style.top = "-100%";
+    }, 3100);
   });
 });
 //player

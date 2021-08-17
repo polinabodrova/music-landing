@@ -12,7 +12,16 @@ $greenblue: #00adb5;
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; //1 rem = 10px; 10/16*100
+  @include respond(tab-land) {
+    font-size: 56.25%; //1 rem = 9px
+  }
+  @include respond(tab-port) {
+    font-size: 50%; //1 rem = 8px
+  }
+  @include respond(big-desktop) {
+    font-size: 75%; //1 rem = 8px
+  }
 }
 
 body {
@@ -29,20 +38,22 @@ body {
 #initial-page {
   position: fixed;
   z-index: 1;
-  left: 0;
+  // left: 0;
   top: 0;
   width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(
-    to right,
-    #393f45,
-    #2e383b,
-    #273130,
-    #222925,
-    #1f211b
-  );
-  transition: 1s;
-  font-size: 10rem;
+  height: 100%;
+  // background-image: linear-gradient(
+  //   to right,
+  //   #393f45,
+  //   #2e383b,
+  //   #273130,
+  //   #222925,
+  //   #1f211b
+  // );
+  background-image: url(./try/9.jpg);
+  background-size: cover;
+  transition: 1.2s;
+  font-size: 11rem;
   font-weight: 100;
   letter-spacing: -1.5px;
 }
@@ -72,6 +83,7 @@ body {
   bottom: 15rem;
   opacity: 0;
   transition: ease-in-out 0.5s;
+  filter: blur(3rem);
 }
 .logo-name {
   z-index: 1;
@@ -365,36 +377,68 @@ a {
       color: $greenblue;
     }
     & input {
-      width: 35rem;
+      width: 45rem;
       height: 3.5rem;
       border: none;
       outline: none;
       border-radius: 1.2rem;
       background-color: rgba(128, 128, 128, 0.2);
       margin: 0.6rem 0;
+      text-indent: 3.5rem;
+      color: white;
+      &:focus {
+        border: 0.2rem solid $greenblue;
+        & ~ i {
+          color: $greenblue;
+        }
+      }
     }
     textarea {
       border: none;
       outline: none;
-      width: 35rem;
-      height: 10rem;
+      min-height: 12rem;
+      max-height: 20rem;
+      min-width: 45rem;
+      max-width: 45rem;
       border-radius: 1.2rem;
       background-color: rgba(128, 128, 128, 0.2);
       vertical-align: super;
-      text-indent: 1rem;
+      text-indent: 3rem;
       line-height: 2.5rem;
       font-size: 1.7rem;
       margin: 0.6rem 0;
       color: white;
+      padding-left: 1rem;
+      &:focus {
+        border: 0.2rem solid $greenblue;
+        & ~ i {
+          color: $greenblue;
+        }
+      }
     }
     & button {
-      width: 15rem;
-      height: 4rem;
-      border-radius: 1.3rem;
+      // width: 15rem;
+      // height: 4rem;
+      padding: 1.5rem 2.5rem;
+      border-radius: 1rem;
       background-color: $greenblue;
       border: none;
       cursor: pointer;
+      margin-right: 3rem;
     }
+  }
+}
+
+.contacts__form-field {
+  position: relative;
+  & i {
+    position: absolute;
+    left: 1rem;
+    top: 4rem;
+    color: rgba(128, 128, 128, 0.6);
+    // &:focus {
+    //   color: $greenblue;
+    // }
   }
 }
 .contacts-img {
@@ -429,3 +473,107 @@ a {
     }
   }
 }
+
+// .contacts {
+//   margin: 2rem 0 auto 5rem;
+//   display: flex;
+//   flex-direction: row;
+//   font-size: 2rem;
+//   line-height: 2.8rem;
+//   justify-content: center;
+//   flex-wrap: wrap;
+
+//   &__form {
+//     color: white;
+//     & p {
+//       margin: 1.5rem 0;
+//     }
+//     & span {
+//       color: $greenblue;
+//     }
+//     & input {
+//       width: 35rem;
+//       height: 3.5rem;
+//       border: none;
+//       outline: none;
+//       border-radius: 1.2rem;
+//       background-color: rgba(128, 128, 128, 0.2);
+//       margin: 0.6rem 0;
+//       text-indent: 3.5rem;
+//       &:focus {
+//         border: 0.2rem solid $greenblue;
+//       }
+//     }
+//     textarea {
+//       border: none;
+//       outline: none;
+//       width: 35rem;
+//       height: 10rem;
+//       // min-width: 100%;
+//       // max-width: 100%;
+//       // min-height: 12rem;
+//       // max-height: 20rem;
+//       // padding: 1.5rem 2rem 0 4.8rem;
+//       border-radius: 1.2rem;
+//       background-color: rgba(128, 128, 128, 0.2);
+//       vertical-align: super;
+//       text-indent: 3.5rem;
+//       line-height: 2.5rem;
+//       font-size: 1.7rem;
+//       margin: 0.6rem 0;
+//       color: white;
+//       &:focus {
+//         border: 0.2rem solid $greenblue;
+//       }
+//     }
+//     & button {
+//       width: 15rem;
+//       height: 4rem;
+//       border-radius: 1.3rem;
+//       background-color: $greenblue;
+//       border: none;
+//       cursor: pointer;
+//     }
+//   }
+// }
+// .form .contacts__form-field {
+//   position: relative;
+//   & i {
+//     position: absolute;
+//     left: 1rem;
+//     top: 4rem;
+//     color: rgba(128, 128, 128, 0.6);
+//   }
+// }
+// .contacts-img {
+//   &__box {
+//     position: relative;
+//     background-color: hotpink;
+//     width: 30rem;
+//     height: 45rem;
+//     margin: 2rem 4rem;
+//     & ::before {
+//       content: "";
+//       position: absolute;
+//     }
+//     & img {
+//     }
+//     &-circle {
+//       position: absolute;
+//       width: 30rem;
+//       height: 30rem;
+//       background-color: $greenblue;
+//       overflow: hidden;
+//       bottom: 0;
+//       left: 0;
+//       border-radius: 50%;
+//       & img {
+//         position: absolute;
+//         bottom: 0;
+//         left: 50%;
+//         transform: translateX(-50%);
+//         height: 40rem;
+//       }
+//     }
+//   }
+// }

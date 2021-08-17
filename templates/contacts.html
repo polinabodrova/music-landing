@@ -54,26 +54,40 @@
       <div class="contacts__form">
         <h2>Get <span>in</span> touch</h2>
         <p>
-          Contact me directly through social media or fill out the form </br> and I'll
-          get back to you soon
+          If you are interested in working with me or have any questions </br>
+          contact me directly through social media or fill out the form </br> 
+          and I'll get back to you soon
         </p>
         <form
           method="POST"
           action="send"
           enctype="application/x-www-form-urlencoded"
         >
+        <div class="contacts__form-field">
           <label for="name">Your name:</label><br />
-          <input type="text" id="name" name="name" /><br />
+          <input type="text" id="name" name="name" />
+          <i class="fa fa-user"></i><br />
+        </div>
+        <div class="contacts__form-field">
           <label for="mail">Your e-mail:</label><br />
-          <input type="email" id="mail" name="email" /><br />
-          <label for="msg">Your message:</label><br />
-          <textarea
-            name="msg"
-            id="msg"
-            placeholder="Type your message here..."
-          ></textarea
-          ><br />
-          <button type="submit" value="submit">Send message</button>
+          <input type="email" id="mail" name="email" />
+          <i class="fa fa-envelope"></i><br />
+        </div>
+          <div class="contacts__form-field">
+            <label for="msg">Your message:</label><br />
+            <textarea
+              name="msg"
+              id="msg"
+              placeholder="Type your message here..."
+            ></textarea
+            >
+            <i class="fa fa-comment-alt"></i><br />
+          </div>
+          
+          <div class="contacts__form-button">
+            <button type="submit" value="submit">Send message</button>
+            <span>Sending your message...</span>
+          </div>
         </form>
       </div>
       <div class="contacts-img">
