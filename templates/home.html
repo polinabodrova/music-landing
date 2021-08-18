@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alex Naumov</title>
-    <link rel="stylesheet" href="./main.css" />
+    <title>Alex Naumov | Music producer</title>
+    <link rel="stylesheet" href="/main.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap"
       rel="stylesheet"
     />
-    <script defer src="index.js"></script>
+    <script defer src="/js-files/home.js"></script>
   </head>
   <body>
     <section id="initial-page">
@@ -28,12 +28,14 @@
           <li class="nav__container-logo">
             <img
               class="nav__container-logo-img"
-              src="./img/alex-logo.svg"
-              width="120"
+              src="/img/alex-logo.svg"
+              width="130"
               alt=""
             />
           </li>
-          <li class="nav__container-item"><a href="/home">Home</a></li>
+          <li class="nav__container-item">
+            <a style="color: #00adb5" href="/home">Home</a>
+          </li>
           <li class="nav__container-item"><a href="/work">Work</a></li>
           <li class="nav__container-item"><a href="/pricing">Pricing</a></li>
           <li class="nav__container-item"><a href="/contacts">Contacts</a></li>
@@ -46,183 +48,13 @@
         <div class="home-page__main-container-img"></div>
         <div class="home-page__main-container-text">
           <h2 class="home-page__main-container-text-h">Official site</h2>
-          <img src="./img/alex-logo.svg" width="550" alt="" />
+          <img src="/img/alex-logo.svg" width="550" alt="" />
           <p class="home-page__main-container-text-p">
             “Music expresses feeling and thought, without language; it was below
             and before speech, and it is above and beyond all words.” – Robert
             G. Ingersoll
           </p>
         </div>
-      </div>
-    </section>
-    <!-- WORK PAGE -->
-    <section id="work">
-      <div class="logo-text">
-        <img
-          class="logo-text__img"
-          src="./img/alex-logo.svg"
-          width="250"
-          alt=""
-          alt=""
-        />
-        <hr class="logo-text__hr" width="19%" />
-        <p class="logo-text__description">
-          professional music producer<br />and beat maker
-        </p>
-      </div>
-      <div class="work-page__main">
-        <div class="work-page__main-animation">
-          <img
-            class="work-page__main-animation-img"
-            src="./img/sasha.png"
-            alt=""
-          />
-          <div class="work-page__main-animation-block"></div>
-        </div>
-        <div class="work-page__main-music">
-          <!-- PLAYER -->
-          <div class="player">
-            <div class="player__main">
-              <audio
-                src="./tracks/na_zare.mp3"
-                class="player__main-audio"
-              ></audio>
-              <div class="player__main-flex">
-                <div class="player__main-progress">
-                  <div class="player__main-progress-line"></div>
-                </div>
-              </div>
-              <div class="player__main-controls">
-                <div class="player__main-controls-prev">
-                  <i class="fas fa-backward"></i>
-                </div>
-                <div class="player__main-controls-playpause">
-                  <i class="fas fa-play-circle"></i>
-                  <i class="fas fa-pause notactive"></i>
-                </div>
-                <div class="player__main-controls-next">
-                  <i class="fas fa-forward"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="feedback">
-            <p class="feedback__text">
-              This guy makes bangers! He took the things I gave him and he made
-              a track that came out better than I'd imagine.
-            </p>
-            <div class="feedback__nameimg">
-              <div class="feedback__nameimg-img">
-                <img
-                  class="feedback__nameimg-img-src"
-                  src="./img/circle-cropped-1.png"
-                  width="50"
-                  alt=""
-                />
-              </div>
-              <p class="feedback__nameimg-name">Brascomb</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- PRICING PAGE -->
-    <section id="price">
-      <div class="logo-text">
-        <img
-          class="logo-text__img"
-          src="./img/alex-logo.svg"
-          width="250"
-          alt=""
-          alt=""
-        />
-        <hr class="logo-text__hr" width="19%" />
-        <p class="logo-text__description">
-          professional music producer<br />and beat maker
-        </p>
-      </div>
-      <div class="price__container">
-        <div class="price__container-item">
-          <div class="price__container-item-head">30 $ BASIC</div>
-          <div class="price__container-item-main"></div>
-        </div>
-        <div class="price__container-item">
-          <div class="price__container-item-head">40 $ STANDARD</div>
-          <div class="price__container-item-main"></div>
-        </div>
-        <div class="price__container-item">
-          <div class="price__container-item-head">50 $ PREMIUM</div>
-          <div class="price__container-item-main"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACTS PAGE -->
-    <section id="contacts">
-      <div class="logo-text">
-        <img
-          class="logo-text__img"
-          src="./img/alex-logo.svg"
-          width="250"
-          alt=""
-          alt=""
-        />
-        <hr class="logo-text__hr" width="19%" />
-        <p class="logo-text__description">
-          professional music producer<br />and beat maker
-        </p>
-      </div>
-      <div class="contact-page">
-        <div class="contact-page__client">
-          <div class="contact-page__client-text">
-            <h3>I'd love to hear from you</h3>
-            <p>
-              Contact me directly through social media or fill out the form and
-              I'll get back to you soon
-            </p>
-          </div>
-          <form
-            method="POST"
-            action="send"
-            enctype="application/x-www-form-urlencoded"
-          >
-            <label for="name">Name:</label><br />
-            <input type="text" id="name" name="name" required /><br />
-            <label for="mail">E-mail:</label><br />
-            <input type="email" id="mail" name="email" required /><br />
-            <label for="msg">Message:</label><br />
-            <textarea name="msg" id="msg" required></textarea><br />
-            <button type="submit" value="submit">Send message</button>
-          </form>
-        </div>
-        <div class="contact-page__img"></div>
-      </div>
-    </section>
-    <section id="work">
-      <div class="main-container">
-        <div class="nav-wrapper">
-          <div class="nav-bar">
-            <div class="work">work</div>
-            <div class="price">price</div>
-            <div class="contacts">contacts</div>
-          </div>
-        </div>
-        <div class="logo">
-          <div class="logo-text">
-            <span class="name">Alex</span> <span class="surname">Naumov</span>
-            <div class="line"></div>
-            <div class="text-underline">
-              professional music producer <br />and beEtmeaker
-            </div>
-          </div>
-          <div class="circle"></div>
-        </div>
-        <img class="sasha" src="./img/sasha.png" alt="" />
-
-        <!-- <div class="player">
-          <audio class="audio" src="./tracks/na_zare.mp3"></audio>
-          <button class="btn-play">play</button>
-        </div> -->
       </div>
     </section>
   </body>

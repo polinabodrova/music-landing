@@ -6157,7 +6157,6 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: url(./try/9.jpg);
   background-size: cover;
   -webkit-transition: 1.2s;
   transition: 1.2s;
@@ -6196,8 +6195,8 @@ body {
   opacity: 0;
   -webkit-transition: ease-in-out 0.5s;
   transition: ease-in-out 0.5s;
-  -webkit-filter: blur(3rem);
-          filter: blur(3rem);
+  -webkit-filter: blur(2rem);
+          filter: blur(2rem);
 }
 
 .logo-name {
@@ -6219,11 +6218,11 @@ nav {
 a {
   color: white;
   text-decoration: none;
+  font-size: 1.9rem;
 }
 
 .nav__container {
   list-style-type: none;
-  font-size: 1.5rem;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 }
@@ -6233,6 +6232,43 @@ a {
 }
 
 /* Mobile menu */
+@media all and (min-width: 400px) {
+  .nav__container {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav__container-logo {
+    font-size: 2rem;
+  }
+  .nav__container-item {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+  .nav__container-toggle {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    font-size: 2rem;
+  }
+  .active {
+    display: block;
+  }
+}
+
 /* Desktop menu */
 @media all and (min-width: 960px) {
   .nav__container {
@@ -6621,6 +6657,30 @@ a {
   border: none;
   cursor: pointer;
   margin-right: 3rem;
+}
+
+.contacts__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 3.5rem;
+}
+
+.contacts__social img {
+  opacity: 0.5;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.contacts__social img:hover {
+  opacity: 0.9;
 }
 
 .contacts__form-field {
